@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: linkshortener-postgres
+    environment:
+      - POSTGRES_USER=sl_user
+      - POSTGRES_PASSWORD=121212
+      - POSTGRES_DB=shortlink_db
+    ports:
+      - "5432:5432"
+    restart: always
